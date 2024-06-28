@@ -1,0 +1,36 @@
+Guía de Uso de la API REST
+
+    1. Autenticación
+        Para obtener un token JWT, realiza una solicitud POST al endpoint /login con las credenciales del usuario.
+
+        Endpoint: /login
+        Método: POST
+        Cuerpo de la Solicitud (JSON):
+
+        json
+        Copiar código
+        "Usuario real!!!"
+        {
+            "username": "admin",
+            "password": "12345"
+        }
+
+    2. Uso del Token para Acceder a los Endpoints Protegidos
+
+        Una vez que hayas obtenido el token JWT, puedes usarlo para acceder a los endpoints protegidos de la API. D
+        ebes incluir el token en el encabezado de autorización de tus solicitudes.
+
+        Encabezado de Autorización:
+
+        Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...
+
+    3. Uso del Token en Postman
+        Abre Postman y crea una nueva solicitud.
+        Configura la solicitud con el método y la URL del endpoint al que deseas acceder.
+        Ve a la pestaña Authorization.
+        Selecciona Bearer Token en el menú desplegable.
+        En el campo de token, pega el token JWT que obtuviste al hacer login.
+        Envía la solicitud.
+
+    todos los end point estan documentados con swagger(si quieres probar metiante la web de swagger te invito a que
+    mires la guia que se encuentra en la carpeta swagger...)
